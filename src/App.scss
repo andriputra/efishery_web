@@ -72,3 +72,24 @@ body{
 }
 
 
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    .main-content {
+      #Tabledata{
+        .card{
+          .body-table{
+            th, td{
+              vertical-align: middle;
+            }
+            .action-btn{
+              display: flex;
+            }
+          }
+          .btn-block{
+            margin-top: 10px;
+          }
+        }
+      }  
+    }
+  }
+}
