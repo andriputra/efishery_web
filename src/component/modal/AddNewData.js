@@ -24,8 +24,6 @@ export const AddNewData = ({ show, handleClose }) => {
       .then(response => response.json())
       .then(res => {
         setarea(res)
-
-        // console.log(res)
       })
   }
   const getdataSize = async () => {
@@ -101,63 +99,49 @@ export const AddNewData = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Body>
+        <h4 className="text-center">Add Data</h4>
+        <hr></hr>
         <div className="container">
-          <div className="row">
-            <div className="col-md-12 col-sm-12">
-              Provinsi
-            </div>
-            <div className="col-md-12 col-sm-12">
-              <Select
-                value={dataarea}
-                onChange={handleChangeArea}
-                options={optionsArea}
-                placeholder="Search Area"
-
-              />
-            </div>
+          <div className="form-group mb-2">
+            <label for="Province">Province</label>
+            <Select
+              value={dataarea}
+              onChange={handleChangeArea}
+              options={optionsArea}
+              placeholder="Search Province"
+              id="Province"
+            />
           </div>
-          <div className="row">
-            <div className="col-md-12 col-sm-12">
-              Kota
-            </div>
-            <div className="col-md-12 col-sm-12">
-              <Select
-                value={datakota}
-                onChange={handleChangeKota}
-                options={optionsKota}
-                placeholder="Search Kota"
-
-              />
-            </div>
+          <div className="form-group mb-2">
+            <label for="City">City</label>
+            <Select
+              value={datakota}
+              onChange={handleChangeKota}
+              options={optionsKota}
+              placeholder="Search City"
+              id="City"
+            />
           </div>
-          <div className="row">
-            <div className="col-md-12 col-sm-12">
-              Size
-            </div>
-            <div className="col-md-12 col-sm-12">
-              <Select
-                value={datasize}
-                onChange={handleChangeSize}
-                options={optionsSize}
-                placeholder="Search Size"
-
-              />
-            </div>
+          <div className="form-group mb-2">
+            <label for="Size">Size</label>
+            <Select
+              value={datasize}
+              onChange={handleChangeSize}
+              options={optionsSize}
+              placeholder="Search Size"
+              id="Size"
+            />
           </div>
-          <div className="row">
-            <div className="col-md-12 col-sm-12">
-              Price
-            </div>
-            <div className="col-md-12 col-sm-12">
-              <input type="text" placeholder="Harga" className="form-control"
-                value={harga} onChange={(e) => setharga(e.target.value.replace(/[^0-9]+/g, ''))}
-              />
-            </div>
+          <div className="form-group mb-2">
+            <label for="Price">Price</label>
+            <input id="Price"type="text" placeholder="Input Price" className="form-control"
+              value={harga} onChange={(e) => setharga(e.target.value.replace(/[^0-9]+/g, ''))}
+            />
           </div>
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={() => { btnAdd(); handleClose() }}>
+        <Button variant="btn btn-warning" onClick={() => { btnAdd(); handleClose() }}>
           Save Changes
         </Button>
       </Modal.Footer>

@@ -1,8 +1,7 @@
 body{
   background-color: rgba(40, 183, 150, 0.95);
   .main-content{
-    background-color: rgba(40, 183, 150, 0.95);
-    padding: 50px 0px;
+    padding: 50px 0px 70px;
     #Tabledata{
       .card{
         padding: 30px;
@@ -57,6 +56,9 @@ body{
           text-align: center;
         }
         .body-table{
+          th, td{
+            vertical-align: middle;
+          }
           .action-btn{
             button{
               margin-right: 10px;
@@ -65,6 +67,40 @@ body{
               }
             }
           }
+        }
+      }
+    }
+  }
+  .modal-dialog{
+    .modal-content{
+      .modal-body{
+        .form-group{
+          font-size: 15px;
+          label{
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    background-color: #c3eac3;
+    padding: 10px 0px;
+    p{
+      margin-bottom: 0px;
+      font-size: 14px;
+      color: #028c6c;
+      a{
+        color: #028c6c;
+        text-decoration: none;
+        &:hover{
+          color: #333333;
         }
       }
     }
