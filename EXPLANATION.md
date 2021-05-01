@@ -1,0 +1,1 @@
+Alasan membuat tampilan seperti ini
