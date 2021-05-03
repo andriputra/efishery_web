@@ -92,12 +92,20 @@ export const TableData = () => {
     e.preventDefault()
     let data2;
 
-    let pattern = (search.toLocaleUpperCase())
-    let reg = new RegExp(pattern, "g")
-
-    data2 = data.filter(item => item.area_kota !== null ? item.area_kota.toLowerCase().includes(`${search}`) : item.area_kota)
-    setDataTemp(data2)
-    console.log(data2)
+    const filteruser = data.filter(item => {
+      const query = search
+      if (item.area_kota !== null) {
+        return (
+          item.area_kota.toLowerCase().indexOf(query) >= 0 ||
+          item.area_provinsi.toLowerCase().indexOf(query) >= 0 ||
+          item.size.indexOf(query) >= 0 ||
+          item.price !== null &&(
+            item.price.toLowerCase().indexOf(query) >=0 
+          )   
+        )
+      }
+    })
+    setDataTemp(filteruser)
   }
 
   const btnSortPrice = () => {
