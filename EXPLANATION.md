@@ -1,4 +1,4 @@
-# Alasan Membuat Tampilan Seperti dibawah ini 
+# Alasan Membuat Tampilan Seperti yang di develop 
 
 - Pengambilan warna dominan hijau diambil dari jiwa logo dan main web nya Efishery yang sejalan dengan cita-cita luhurnya yaitu ingin membuat bumi yang kita tinggali kembali hijau dan asri dengan semangat
 - Tampilan yang bersatu antara search bar dan data yang disajikan menjadikan User yang berselancar akan sangat mudah memahami apa yang dilakukan di form search tersebut.
